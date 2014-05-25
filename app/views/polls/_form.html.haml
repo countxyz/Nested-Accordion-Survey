@@ -1,0 +1,5 @@
+= simple_form_for @poll, remote: true do |f|
+  = f.input :name
+
+  .modal-footer
+    %span.submit-right= f.button :submit, 'Submit'    

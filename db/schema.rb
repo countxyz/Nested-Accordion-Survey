@@ -18,10 +18,12 @@ ActiveRecord::Schema.define(version: 20140525075113) do
 
   create_table "polls", force: true do |t|
     t.string   "name"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "polls", ["name"], name: "index_polls_on_name", using: :btree
+  add_index "polls", ["name"], name: "index_polls_on_name", unique: true, using: :btree
+  add_index "polls", ["slug"], name: "index_polls_on_slug", unique: true, using: :btree
 
 end

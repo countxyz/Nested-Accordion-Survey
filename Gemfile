@@ -7,12 +7,14 @@ gem 'pg', '~> 0.17.1'
 gem 'turbolinks', '~> 2.2.2'
 gem 'coffee-rails', '~> 4.0.1'
 gem 'jquery-rails', '~> 3.1.0'
+gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'jbuilder', '~> 2.0'
 gem 'haml-rails', '~> 0.5.3'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.1.1.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'simple_form', '~> 3.1.0.rc1'
+gem 'friendly_id', '~> 5.0.3'
 
 gem 'rails_12factor', '~> 0.0.2', group: :production
 
