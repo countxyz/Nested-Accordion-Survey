@@ -5,8 +5,7 @@ feature 'Poll management' do
     poll = create(:poll)
     visit root_path
     
-    click_link 'Delete'
-    sleep 5
+    click_button 'Delete'
     confirm_dialog
 
     expect(page).to_not have_content 'Polls are Awesome'

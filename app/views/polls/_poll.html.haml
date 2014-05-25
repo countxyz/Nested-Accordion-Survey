@@ -2,5 +2,10 @@
 %tr
   %th.bold_name{scope: 'row'}= poll.name
   %td
-    = link_to 'Delete', poll, method: :delete, remote: true,
-      data: { confirm: 'Are you sure?' }, class: 'delete_row'
+    = link_to edit_poll_path(poll), remote: true do
+      %button.btn.btn-default.btn-xs
+        Edit
+    = link_to poll, method: :delete, remote: true,
+      data: { confirm: 'Are you sure?' }, class: 'delete_row' do
+      %button.btn.btn-danger.btn-xs
+        Delete
