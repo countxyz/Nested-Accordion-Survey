@@ -1,14 +1,16 @@
-.col-md-10
-  .panel.panel-default
-    .panel-heading
-      Polls
+.row
+  .col-md-7.col-md-offset-2
+    .panel.panel-default
+      .panel-heading
+        Polls
 
-    %table.table.table-hover
-      %thead
-        %tr
-          %th{scope: "col"} Name
-      %tbody#polls
-        = render 'index'
+      %table.table.table-hover
+        %thead
+          %tr
+            %th{scope: "col"} Name
+            %th{scope: "col"} Actions
+        %tbody#polls
+          = render 'index'
 
 .row
   .modal.fade#poll-modal(tabindex="-1" aria-labelledby="myModalLabel"

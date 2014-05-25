@@ -4,3 +4,4 @@
 //= require turbolinks
 //= require jquery.ui.all
 //= require bootstrap
+//= require tables
