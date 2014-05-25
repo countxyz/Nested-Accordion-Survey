@@ -2,6 +2,11 @@ require 'spec_helper'
 
 describe Poll do
 
+  describe 'associations' do
+    it { should have_many(:questions)                    }
+    it { should accept_nested_attributes_for(:questions) }
+  end
+
   describe 'presence' do
     it { should validate_presence_of(:name) }
   end

@@ -5,6 +5,7 @@ class PollsController < ApplicationController
 
   def new
     @poll = Poll.new
+    @poll.questions.build
   end
 
   def create
@@ -35,6 +36,6 @@ class PollsController < ApplicationController
     end
 
     def poll_params
-      params.require(:poll).permit(:name)
+      params.require(:poll).permit(:name, questions_attributes: [:id, :content])
     end
 end
