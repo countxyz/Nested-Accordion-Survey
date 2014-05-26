@@ -1,4 +1,4 @@
-= simple_form_for @poll, remote: true do |f|
+= simple_form_for @survey, remote: true do |f|
   = f.input :name
   = f.simple_fields_for :questions do |ff|
     = ff.input :content, label: 'Question'

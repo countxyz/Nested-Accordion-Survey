@@ -8,7 +8,7 @@ require 'action_view/railtie'
 require 'sprockets/railtie'
 Bundler.require(*Rails.groups)
 
-module PollApp
+module NestedAccordionSurvey
   class Application < Rails::Application
   end
 end

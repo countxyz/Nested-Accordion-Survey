@@ -11,4 +11,4 @@ def secure_token
   end
 end
 
-PollApp::Application.config.secret_key_base = secure_token
+NestedAccordionSurvey::Application.config.secret_key_base = secure_token

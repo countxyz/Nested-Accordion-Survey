@@ -1,0 +1,9 @@
+$('ul.errors').html('')
+- if @survey.errors.any?
+  - @survey.errors.full_messages.each do |message|
+    $('ul.errors').append($('
+    %li>
+    ').html("#{message.html_safe}"))
+- else
+  $('#survey-modal').modal('hide');
+  $("#surveys").html("#{ j render 'index' }");

@@ -2,5 +2,5 @@ en:
   simple_form:
     submit:
       poll:
-        create: 'Create Poll'
-        update: 'Update Poll'
+        create: 'Create Survey'
+        update: 'Update Survey'

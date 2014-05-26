@@ -11,28 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140525120954) do
+ActiveRecord::Schema.define(version: 20140526231327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "polls", force: true do |t|
+  create_table "answers", force: true do |t|
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "question_id"
+  end
+
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
+
+  create_table "questions", force: true do |t|
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "survey_id"
+  end
+
+  add_index "questions", ["survey_id"], name: "index_questions_on_survey_id", using: :btree
+
+  create_table "surveys", force: true do |t|
     t.string   "name"
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "polls", ["name"], name: "index_polls_on_name", unique: true, using: :btree
-  add_index "polls", ["slug"], name: "index_polls_on_slug", unique: true, using: :btree
-
-  create_table "questions", force: true do |t|
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "poll_id"
-  end
-
-  add_index "questions", ["poll_id"], name: "index_questions_on_poll_id", using: :btree
+  add_index "surveys", ["name"], name: "index_surveys_on_name", unique: true, using: :btree
+  add_index "surveys", ["slug"], name: "index_surveys_on_slug", unique: true, using: :btree
 
 end

@@ -74,6 +74,8 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    font-awesome-sass (4.1.0)
+      sass (~> 3.2)
     formulaic (0.0.6)
       activesupport
       capybara
@@ -221,7 +223,7 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
-    tzinfo (1.1.0)
+    tzinfo (1.2.0)
       thread_safe (~> 0.1)
     uglifier (2.5.0)
       execjs (>= 0.3.0)
@@ -242,6 +244,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.1)
   database_cleaner (~> 1.2.0)
   factory_girl_rails (~> 4.4.1)
+  font-awesome-sass (~> 4.1.0)
   formulaic (~> 0.0.6)
   friendly_id (~> 5.0.3)
   haml-rails (~> 0.5.3)

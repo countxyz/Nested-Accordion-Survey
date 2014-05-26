@@ -1,0 +1,16 @@
+%li
+  %h3.cbp-nttrigger= survey.name
+  .cbp-ntcontent
+  - survey.questions.each do |question|
+    %p= question.content
+    %ul
+    = content_tag_for(:li, survey, 'data-id' => survey.id) do
+      %li
+        = link_to edit_survey_path(survey), remote: true do
+          %button.btn.btn-default.btn-xs
+            Edit
+      %li
+        = link_to survey, method: :delete, remote: true,
+          data: { confirm: 'Are you sure?' }, class: 'delete_row' do
+          %button.btn.btn-danger.btn-xs
+            Delete

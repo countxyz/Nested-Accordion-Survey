@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-feature 'Poll management' do
-  scenario 'creates a new poll', js: true do
+feature 'Survey management' do
+  scenario 'creates a new survey', js: true do
     visit root_path
-    click_button 'New Poll' 
+    click_button 'New Survey' 
 
-    fill_in 'Name', with: 'Poll Me'
+    fill_in 'Name', with: 'Survey Me'
     fill_in 'Question', with: 'Question Here'
-    click_button 'Create Poll'
-    expect(page).to have_content 'Poll Me'
+    click_button 'Create Survey'
+    expect(page).to have_content 'Survey Me'
   end
 end

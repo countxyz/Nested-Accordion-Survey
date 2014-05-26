@@ -1,9 +1,0 @@
-$('ul.errors').html('')
-- if @poll.errors.any?
-  - @poll.errors.full_messages.each do |message|
-    $('ul.errors').append($('
-    %li>
-    ').html("#{message.html_safe}"))
-- else
-  $('#poll-modal').modal('hide');
-  $("#polls").html("#{ j render 'index' }");
