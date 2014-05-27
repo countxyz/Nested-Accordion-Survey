@@ -1,5 +1,5 @@
 = content_tag_for(:li, survey, 'data-id' => survey.id) do
-  %h3.cbp-nttrigger= survey.name
+  %h2.cbp-nttrigger= survey.name
   = link_to survey, remote: true, method: :delete, class: 'action-right',
     data: { confirm: 'Are you sure?' } do
     %button.btn.btn-danger.btn-xs

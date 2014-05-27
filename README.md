@@ -3,7 +3,7 @@
 ## About
 
 A Rails Single Page Survey Demo powered by the super duper awesomeness of
-Codrops
+Codrop's
 [Nested Accordion](http://tympanus.net/codrops/2013/03/29/nested-accordion).
 View Demo:
 [Rails Accordion Survey](http://nested-accordion-survey.herokuapp.com/)
