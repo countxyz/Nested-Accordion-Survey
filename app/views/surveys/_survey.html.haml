@@ -1,5 +1,6 @@
 = content_tag_for(:li, survey, 'data-id' => survey.id) do
   %h2.cbp-nttrigger= survey.name
+  .cbp-ntcontent
   = link_to survey, remote: true, method: :delete, class: 'action-right',
     data: { confirm: 'Are you sure?' } do
     %button.btn.btn-danger.btn-xs
@@ -9,6 +10,9 @@
     %button.btn.btn-default.btn-xs
       = icon('pencil')
       Edit
-  .cbp-ntcontent
-  - survey.questions.each do |question|
-    %p= question.content
+  %ul.cbp-ntsubaccordion
+    %li
+    - survey.questions.each do |question|
+      %h4.cbp-nttrigger= question.content
+      - question.answers.each do |answer|
+        = answer.content

@@ -16,7 +16,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'simple_form', '~> 3.1.0.rc1'
 gem 'friendly_id', '~> 5.0.3'
 gem 'font-awesome-sass', '~> 4.1.0'
-
 gem 'rails_12factor', '~> 0.0.2', group: :production
 
 group :development do

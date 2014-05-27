@@ -1,6 +1,5 @@
 class Answer < ActiveRecord::Base
-  belongs_to :question, inverse_of: :answer, dependent: :destroy
+  belongs_to :question
 
-  validates :question, presence: true
-  validates :content,  presence: true, length: { in: 2..100 }
+  validates :content,  length: { in: 2..100 }, allow_blank: true
 end

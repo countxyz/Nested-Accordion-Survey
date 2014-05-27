@@ -7,7 +7,7 @@ feature 'Survey management' do
     click_button 'Edit'
 
     fill_in 'Question', with: 'Updated question'
-    click_button 'Submit'
+    click_button 'Update Survey'
     expect(page).to have_content 'Updated question'
   end
 end

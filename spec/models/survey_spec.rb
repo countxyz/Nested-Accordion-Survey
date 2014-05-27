@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Survey do
 
   describe 'associations' do
-    it { should have_many(:questions)                    }
-    it { should accept_nested_attributes_for(:questions) }
+    it { should have_many(:questions).dependent(:destroy)                    }
+    it { should accept_nested_attributes_for(:questions).allow_destroy(true) }
   end
 
   describe 'presence' do

@@ -21,7 +21,7 @@
 
     &:hover,
     &:focus {
-      color: #00AEEF;
+      color: #5CB85C;
       text-decoration: none;
       cursor: pointer;
     }
@@ -31,3 +31,7 @@
     font-size: 1.2em;
   }
 }
+
+.question { padding-left: 20px; }
+
+.answers { padding-left: 40px; }

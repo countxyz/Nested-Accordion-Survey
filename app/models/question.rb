@@ -1,9 +1,8 @@
 class Question < ActiveRecord::Base
   belongs_to :survey, inverse_of: :questions
 
-  has_many :answers
-  accepts_nested_attributes_for :answers
+  has_many :answers, dependent: :destroy
+  accepts_nested_attributes_for :answers, allow_destroy: true
 
-  validates :survey,  presence: true
-  validates :content, presence: true, length: { in: 2..100 }
+  validates :content, length: { in: 2..100 }, allow_blank: true
 end

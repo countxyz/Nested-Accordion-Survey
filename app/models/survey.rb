@@ -2,7 +2,7 @@ class Survey < ActiveRecord::Base
   extend FriendlyId
 
   has_many :questions, inverse_of: :survey, dependent: :destroy
-  accepts_nested_attributes_for :questions
+  accepts_nested_attributes_for :questions, allow_destroy: true
   
   friendly_id :name, use: [:slugged, :finders]
 

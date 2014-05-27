@@ -5,7 +5,6 @@ class SurveysController < ApplicationController
 
   def new
     @survey = Survey.new
-    @survey.questions.build
   end
 
   def create
@@ -32,6 +31,7 @@ class SurveysController < ApplicationController
 
     def survey_params
       params.require(:survey).permit(:name,
-                                     questions_attributes: [:id, :content])
+        questions_attributes: [:id, :content, :_destroy,
+          answers_attributes: [:id, :content, :_destroy]])
     end
 end

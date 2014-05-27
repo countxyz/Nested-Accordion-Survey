@@ -1,7 +1,7 @@
-class CreateAnswer < ActiveRecord::Migration
+class CreateAnswers < ActiveRecord::Migration
   def change
     create_table :answers do |t|
-      t.text :content
+      t.string :content
 
       t.timestamps
     end

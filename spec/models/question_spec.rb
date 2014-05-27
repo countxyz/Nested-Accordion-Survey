@@ -3,11 +3,9 @@ require 'spec_helper'
 describe Question do
 
   describe 'associations' do
-    it { should belong_to(:survey)                    }
-  end
-
-  describe 'presence' do
-    it { should validate_presence_of(:content) }
+    it { should belong_to(:survey)                                         }
+    it { should have_many(:answers).dependent(:destroy)                    }
+    it { should accept_nested_attributes_for(:answers).allow_destroy(true) }
   end
 
   describe 'field lengths' do
