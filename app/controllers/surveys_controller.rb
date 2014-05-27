@@ -18,11 +18,6 @@ class SurveysController < ApplicationController
 
   def destroy
     @survey.destroy
-
-    respond_to do |format|
-      format.html { redirect_to @survey }
-      format.js   { head :no_content    }
-    end
   end
 
   private

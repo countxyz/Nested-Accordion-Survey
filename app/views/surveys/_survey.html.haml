@@ -1,16 +1,14 @@
-%li
+= content_tag_for(:li, survey, 'data-id' => survey.id) do
   %h3.cbp-nttrigger= survey.name
+  = link_to survey, remote: true, method: :delete, class: 'action-right',
+    data: { confirm: 'Are you sure?' } do
+    %button.btn.btn-danger.btn-xs
+      = icon('times')
+      Delete
+  = link_to edit_survey_path(survey), remote: true, class: 'action-right' do
+    %button.btn.btn-default.btn-xs
+      = icon('pencil')
+      Edit
   .cbp-ntcontent
   - survey.questions.each do |question|
     %p= question.content
-    %ul
-    = content_tag_for(:li, survey, 'data-id' => survey.id) do
-      %li
-        = link_to edit_survey_path(survey), remote: true do
-          %button.btn.btn-default.btn-xs
-            Edit
-      %li
-        = link_to survey, method: :delete, remote: true,
-          data: { confirm: 'Are you sure?' }, class: 'delete_row' do
-          %button.btn.btn-danger.btn-xs
-            Delete

@@ -5,4 +5,3 @@
 //= require jquery.ui.all
 //= require bootstrap
 //= require jquery.cbpNTAccordion.min
-//= require tables
