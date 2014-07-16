@@ -1,18 +1,26 @@
-= content_tag_for(:li, survey, 'data-id' => survey.id) do
-  %h2.cbp-nttrigger= survey.name
+%li
+  %h3.cbp-nttrigger= survey.name
 
   .cbp-ntcontent
-  = link_to survey, remote: true, method: :delete, class: 'action-right',
-    data: { confirm: 'Are you sure?' } do
-    %button.btn.btn-danger.btn-xs= icon('times', 'Delete')
+    %p
+      = link_to survey, remote: true, class: 'action-right delete-survey',
+        method: :delete, data: { confirm: 'Are you sure?' } do
+        %button.btn.btn-danger.btn-xs= icon('times', 'Delete')
 
-  = link_to edit_survey_path(survey), remote: true, class: 'action-right' do
-    %button.btn.btn-default.btn-xs= icon('pencil', 'Edit')
+      = link_to edit_survey_path(survey), remote: true, class: 'action-right' do
+        %button.btn.btn-default.btn-xs= icon('pencil', 'Edit')
 
-  %ul.cbp-ntsubaccordion
-    %li
     - survey.questions.each do |question|
-      %h4.cbp-nttrigger= question.content
+      %ul.cbp-ntsubaccordion
+        %li      
+          %h4.cbp-nttrigger= question.content
 
-      - question.answers.each do |answer|
-        = answer.content
+          .cbp-ntcontent
+            - question.answers.each do |answer|
+              %ul
+                %li= answer.content
+              
+
+:coffeescript
+  $ ->
+    $('#cbp-ntaccordion').cbpNTAccordion()

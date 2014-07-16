@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  belongs_to :survey, inverse_of: :questions
+  belongs_to :survey
 
   has_many :answers, dependent: :destroy
 
