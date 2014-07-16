@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'Survey management' do
   scenario 'update a new survey', js: true do
@@ -6,8 +6,9 @@ feature 'Survey management' do
     visit root_path
     click_button 'Edit'
 
-    fill_in 'Question', with: 'Updated question'
+    fill_in 'Name', with: 'Survey Me Again'
     click_button 'Update Survey'
-    expect(page).to have_content 'Updated question'
+
+    expect(page).to_not have_content 'Suvey Me'
   end
 end

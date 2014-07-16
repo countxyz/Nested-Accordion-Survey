@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'Survey management' do
   scenario 'delete a survey', js: true do

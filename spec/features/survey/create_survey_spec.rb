@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'Survey management' do
   scenario 'creates a new survey', js: true do
@@ -6,7 +6,6 @@ feature 'Survey management' do
     click_button 'New Survey' 
 
     fill_in 'Name', with: 'Survey Me'
-    fill_in 'Question', with: 'Question Here'
     click_button 'Create Survey'
     expect(page).to have_content 'Survey Me'
   end
