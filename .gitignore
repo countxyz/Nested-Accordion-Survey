@@ -5,10 +5,6 @@
 *~
 database.yml
 .secret
-.rspec
 .bundle
 .ruby-version
-zeus.json
-custom_plan.rb
 .env
-Procfile
