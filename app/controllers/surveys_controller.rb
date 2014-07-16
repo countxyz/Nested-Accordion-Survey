@@ -1,7 +1,7 @@
 class SurveysController < ApplicationController
-  respond_to :html, :js
   before_action :set_survey,  only: [:edit, :update, :destroy]
   before_action :all_surveys, only: [:index, :create, :update]
+  respond_to :html, :js
 
   def new
     @survey = Survey.new

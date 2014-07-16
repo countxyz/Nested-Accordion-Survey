@@ -1,7 +1,6 @@
 .row
   .col-md-7.col-md-offset-2
-    %ul.cbp-ntaccordion#cbp-ntaccordion
-      = render 'index'
+    %ul.cbp-ntaccordion#cbp-ntaccordion= render @surveys
 
 .row
   .modal.fade#survey-modal(tabindex="-1" aria-labelledby="myModalLabel"

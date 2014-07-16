@@ -1,9 +1,8 @@
 $('ul.errors').html('')
 - if @survey.errors.any?
   - @survey.errors.full_messages.each do |message|
-    $('ul.errors').append($('
-    %li>
-    ').html("#{message.html_safe}"))
+    $('ul.errors').append($('<li>').html("#{message.html_safe}"))
+
 - else
-  $('#survey-modal').modal('hide');
-  $("#cbp-ntaccordion").html("#{ j render 'index' }");
+  $('#survey-modal').modal('hide')
+  $("#cbp-ntaccordion").html("#{ j render @surveys }")
