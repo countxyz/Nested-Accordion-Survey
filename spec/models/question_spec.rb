@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Question do
 
@@ -9,6 +9,6 @@ describe Question do
   end
 
   describe 'field lengths' do
-    it { should ensure_length_of(:content).is_at_least(2).is_at_most(100) }
+    it { should ensure_length_of(:content).is_at_most(100) }
   end
 end

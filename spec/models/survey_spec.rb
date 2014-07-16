@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Survey do
 
@@ -16,6 +16,6 @@ describe Survey do
   end
 
   describe 'field lengths' do
-    it { should ensure_length_of(:name).is_at_least(2).is_at_most(100) }
+    it { should ensure_length_of(:name).is_at_most(100) }
   end
 end

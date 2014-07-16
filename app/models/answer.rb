@@ -1,5 +1,5 @@
 class Answer < ActiveRecord::Base
   belongs_to :question
 
-  validates :content,  length: { in: 2..100 }, allow_blank: true
+  validates_length_of :content,  maximum: 100
 end
