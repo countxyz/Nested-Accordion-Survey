@@ -1,5 +1,5 @@
 %li
-  %h3.cbp-nttrigger= survey.name
+  %h2.cbp-nttrigger= survey.name
 
   .cbp-ntcontent
     %p
@@ -13,14 +13,13 @@
     - survey.questions.each do |question|
       %ul.cbp-ntsubaccordion
         %li      
-          %h4.cbp-nttrigger= question.content
+          %h3.cbp-nttrigger= question.content
 
           .cbp-ntcontent
             - question.answers.each do |answer|
               %ul
                 %li= answer.content
               
-
 :coffeescript
   $ ->
     $('#cbp-ntaccordion').cbpNTAccordion()

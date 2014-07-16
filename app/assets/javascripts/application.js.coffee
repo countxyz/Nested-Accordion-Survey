@@ -4,6 +4,6 @@
 #= require turbolinks
 #= require jquery-ui
 #= require bootstrap
-#= require jquery.cbpNTAccordion.min
+#= require jquery.cbpNTAccordion
 #= require cocoon
 #= require survey

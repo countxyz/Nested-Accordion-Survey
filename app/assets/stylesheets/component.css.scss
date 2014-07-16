@@ -27,17 +27,10 @@
   font-weight: 300;
 }
 
-.cbp-ntaccordion h4 {
+.cbp-ntaccordion h3 {
   font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 0.4em;
-  padding: 0.5em 0 0.5em;
-  margin: 0 0 0.5em;
-}
-
-.cbp-ntaccordion h5 {
-  font-size: 1.2em;
-  color: #aaa;
   padding: 0.5em 0 0.5em;
   margin: 0 0 0.5em;
 }
@@ -99,11 +92,7 @@
 .cbp-ntsubaccordion .cbp-ntopen > .cbp-ntcontent,
 .no-js .cbp-ntaccordion .cbp-ntcontent { height: auto; }
 
-@media screen and (max-width: 32em) { 
-  .cbp-ntaccordion {
-    font-size: 70%;
-  }
-}
+@media screen and (max-width: 32em) { .cbp-ntaccordion { font-size: 70%; } }
 
 .action-right {
   float: right;
