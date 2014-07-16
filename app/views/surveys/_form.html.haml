@@ -1,7 +1,11 @@
 = simple_form_for @survey, remote: true do |f|
-  = f.input :name, wrapper_html: { class: 'field' }
-  = f.simple_fields_for :questions do |builder|
-    = render 'question_fields', f: builder
-  = link_to_add_fields 'Add Question', f, :questions
+  = f.input :name
+
+  #questions
+    = f.simple_fields_for :questions do |questions|
+      = render 'question_fields', f: questions
+
+    .links= link_to_add_association 'Add Question', f, :questions
+
   .modal-footer
     %p.text-right= f.button :submit

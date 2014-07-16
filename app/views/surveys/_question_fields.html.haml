@@ -1,7 +1,9 @@
-%fieldset.question
+.nested-fields
   = f.input :content, label: 'Question'
-  = f.input :_destroy, as: :boolean, label: false,
-    inline_label: 'Remove Question'
-  = f.fields_for :answers do |builder|
-    = render 'answer_fields', f: builder
-  = link_to_add_fields 'Add Answer', f, :answers
+  = link_to_remove_association 'remove question', f
+
+  #answers
+    = f.simple_fields_for :answers do |answers|
+      = render 'answer_fields', f: answers
+
+    .links= link_to_add_association 'Add Answer', f, :answers
