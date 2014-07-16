@@ -1,9 +1,9 @@
 class CreateAnswers < ActiveRecord::Migration
   def change
     create_table :answers do |t|
-      t.string :content
+      t.timestamps null: false
 
-      t.timestamps
+      t.string :content, null: false
     end
     add_reference :answers, :question, index: true
   end

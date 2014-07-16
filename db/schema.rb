@@ -11,34 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140527130610) do
+ActiveRecord::Schema.define(version: 20140716002147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: true do |t|
-    t.string   "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "content",     null: false
     t.integer  "question_id"
   end
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
 
   create_table "questions", force: true do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "survey_id"
   end
 
   add_index "questions", ["survey_id"], name: "index_questions_on_survey_id", using: :btree
 
   create_table "surveys", force: true do |t|
-    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name",       null: false
     t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   add_index "surveys", ["name"], name: "index_surveys_on_name", unique: true, using: :btree

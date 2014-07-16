@@ -1,9 +1,9 @@
 class CreateQuestions < ActiveRecord::Migration
   def change
     create_table :questions do |t|
-      t.text :content
+      t.timestamps null: false
 
-      t.timestamps
+      t.text :content
     end
     add_reference :questions, :survey, index: true
   end
