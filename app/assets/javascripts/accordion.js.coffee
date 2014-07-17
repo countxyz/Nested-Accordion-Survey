@@ -1,0 +1,2 @@
+$ ->
+  $('#cbp-ntaccordion').cbpNTAccordion()

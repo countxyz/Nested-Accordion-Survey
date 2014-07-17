@@ -1,6 +1,6 @@
 class SurveysController < ApplicationController
   before_action :set_survey,  only: [:edit, :update, :delete, :destroy]
-  before_action :all_surveys, only: [:index, :create, :update]
+  before_action :all_surveys, only: [:index, :create, :update, :destroy]
   respond_to :html, :js, :json
 
   def new
@@ -17,11 +17,6 @@ class SurveysController < ApplicationController
 
   def destroy
     @survey.destroy
-
-    respond_to do |format|
-      format.html
-      format.js { head :no_content }
-    end
   end
 
   private

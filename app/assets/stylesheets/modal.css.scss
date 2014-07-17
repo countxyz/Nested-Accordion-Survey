@@ -3,6 +3,8 @@
   color: red;
 }
 
+abbr[title] { border-bottom: none; }
+
 .modal-header {
   background-color: black;
   color: white;
@@ -33,3 +35,12 @@
 #questions { padding-left: 20px; }
 
 #answers { padding-left: 40px; }
+
+.modal-footer {
+  display: inline-block;
+  min-width: 100%;
+
+  #hidden-delete { float: left; }
+
+  .submit-right { float: right; }
+}

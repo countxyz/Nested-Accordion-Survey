@@ -5,5 +5,5 @@
 //= require jquery-ui
 //= require bootstrap
 //= require cocoon
-//= require survey
 //= require jquery.cbpNTAccordion.min
+//= require accordion
