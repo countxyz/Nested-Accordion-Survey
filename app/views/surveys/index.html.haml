@@ -5,3 +5,86 @@
 .row
   .modal.fade#survey-modal(tabindex="-1" aria-labelledby="myModalLabel"
     aria-hidden="true")
+
+:javascript
+  ;( function( $, window, undefined ) {
+    'use strict';
+
+    var $body = $( 'html, body' );
+
+    $.CBPNTAccordion = function( options, element ) {
+      this.$el = $( element );
+      this._init( options );
+    };
+
+    $.CBPNTAccordion.defaults = {};
+
+    $.CBPNTAccordion.prototype = {
+      _init : function( options ) {
+        this.options = $.extend( true, {}, $.CBPNTAccordion.defaults, options );
+        this._config();
+        this._initEvents();
+      },
+
+      _config : function() {
+        this.$items = this.$el.find( '.cbp-nttrigger' );
+      },
+
+      _initEvents : function() {
+        this.$items.on( 'click.cbpNTAccordion', function() {
+          var $listItem = $( this ).parent();
+          if( $listItem.hasClass( 'cbp-ntopen' ) ) {
+            $listItem.removeClass( 'cbp-ntopen' );
+          }
+          else {
+            $listItem.addClass( 'cbp-ntopen' );
+            $(document).scrollTop( $listItem.offset().top );
+          }
+        } );
+      },
+      destroy : function() {
+        this.$items.off( '.cbpNTAccordion' ).parent().removeClass( 'cbp-ntopen' );
+      }
+    };
+
+    var logError = function( message ) {
+      if ( window.console ) {
+        window.console.error( message );
+      }
+    };
+
+    $.fn.cbpNTAccordion = function( options ) {
+      if ( typeof options === 'string' ) {
+        var args = Array.prototype.slice.call( arguments, 1 );
+        this.each(function() {
+          var instance = $.data( this, 'cbpNTAccordion' );
+          if ( !instance ) {
+            logError( "cannot call methods on cbpNTAccordion prior to initialization; " +
+            "attempted to call method '" + options + "'" );
+            return;
+          }
+          if ( !$.isFunction( instance[options] ) || options.charAt(0) === "_" ) {
+            logError( "no such method '" + options + "' for cbpNTAccordion instance" );
+            return;
+          }
+          instance[ options ].apply( instance, args );
+        });
+      } 
+      else {
+        this.each(function() {  
+          var instance = $.data( this, 'cbpNTAccordion' );
+          if ( instance ) {
+            instance._init();
+          }
+          else {
+            instance = $.data( this, 'cbpNTAccordion', new $.CBPNTAccordion( options, this ) );
+          }
+        });
+      }
+      return this;
+    };
+  } )( jQuery, window );
+
+  $( function() {
+    $( '#cbp-ntaccordion' ).cbpNTAccordion();
+  } );
