@@ -6,3 +6,4 @@
 //= require bootstrap
 //= require cocoon
 //= require survey
+//= require jquery.cbpNTAccordion.min
