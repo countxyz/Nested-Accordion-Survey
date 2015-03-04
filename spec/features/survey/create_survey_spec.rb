@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Survey management' do
+RSpec.feature 'Survey management' do
   scenario 'creates a new survey', js: true do
     visit root_path
     click_button 'New Survey' 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Survey do
+RSpec.describe Survey do
 
   describe 'associations' do
     it { should have_many(:questions).dependent(:destroy)                    }
@@ -16,6 +16,6 @@ describe Survey do
   end
 
   describe 'field lengths' do
-    it { should ensure_length_of(:name).is_at_most(100) }
+    it { should validate_length_of(:name).is_at_most(100) }
   end
 end

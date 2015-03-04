@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Question do
+RSpec.describe Question do
 
   describe 'associations' do
     it { should belong_to(:survey)                                         }
@@ -9,6 +9,6 @@ describe Question do
   end
 
   describe 'field lengths' do
-    it { should ensure_length_of(:content).is_at_most(100) }
+    it { should validate_length_of(:content).is_at_most(100) }
   end
 end
