@@ -5,12 +5,13 @@
     = f.simple_fields_for :questions do |questions|
       = render 'question_fields', f: questions
 
-    .links= link_to_add_association 'Add Question', f, :questions
+    .links
+      = link_to_add_association 'Add Question', f, :questions
 
   .modal-footer
-    %span#hidden-delete{ style: 'display:none;' }
+    span#hidden-delete style='display:none;'
       = link_to @survey, remote: true, method: :delete,
         data: { confirm: 'Are you sure?' }, id: 'destroy' do
-        %button.btn.btn-sm.btn-danger= icon('exclamation', 'Delete')
+        button = icon('exclamation', 'Delete')
 
-    %p.text-right= f.button :submit
+      = f.button :submit

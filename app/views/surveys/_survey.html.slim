@@ -1,0 +1,18 @@
+li
+  h2.cbp-nttrigger
+    = survey.name
+
+  .cbp-ntcontent
+    p
+      = link_to edit_survey_path(survey), remote: true, class: 'action-right' do
+        button = icon('pencil', 'Edit')
+
+    - survey.questions.each do |question|
+      ul.cbp-ntsubaccordion
+        li      
+          h3.cbp-nttrigger= question.content
+
+          .cbp-ntcontent
+            - question.answers.each do |answer|
+              ul
+                li= answer.content
