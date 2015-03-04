@@ -1,8 +1,7 @@
-@import 'bootstrap_overrides';
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
-@import 'jquery-ui';
+@import 'normalize-rails';
+@import 'bourbon';
+@import 'grid-settings';
+@import 'neat';
 @import 'component';
 @import 'layout';
-@import 'font-awesome';
 @import 'modal';

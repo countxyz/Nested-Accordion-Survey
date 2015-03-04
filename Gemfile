@@ -4,21 +4,20 @@ ruby '2.2.0'
 gem 'rails', '~> 4.1.9'
 gem 'pg', '~> 0.18.1'
 
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bourbon', '~> 4.2.1'
 gem 'cocoon', '~> 1.2.6'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'font-awesome-sass', '~> 4.1.0'
 gem 'friendly_id', '~> 5.0.3'
-gem 'haml-rails', '~> 0.5.3'
-gem 'jbuilder', '~> 2.1.2'
-gem 'jquery-ui-rails', '~> 5.0.0'
 gem 'jquery-rails', '~> 3.1.1'
-gem 'sass-rails', '~> 4.0.3'
+gem 'neat', '~> 1.7.1'
+gem 'normalize-rails', '~> 3.0.1'
+gem 'sass-rails', '~> 5.0.1'
 gem 'simple_form', '~> 3.1.0.rc2'
+gem 'slim-rails', '~> 3.0.1'
 gem 'turbolinks', '~> 2.5.3'
 gem 'uglifier', '~> 2.7.0'
 
-gem 'rails_12factor', '~> 0.0.2', group: :production
+gem 'rails_12factor', '~> 0.0.3', group: :production
 
 group :development do
   gem 'better_errors', '~> 2.1.1'
