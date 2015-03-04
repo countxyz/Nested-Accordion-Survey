@@ -4,8 +4,6 @@ li
 
   .cbp-ntcontent
     p
-      = link_to edit_survey_path(survey), remote: true, class: 'action-right' do
-        button = icon('pencil', 'Edit')
 
     - survey.questions.each do |question|
       ul.cbp-ntsubaccordion

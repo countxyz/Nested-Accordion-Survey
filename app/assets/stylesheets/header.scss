@@ -2,7 +2,21 @@
   background-color: black;
   color: #C0C0C0;
 
-  h1 {
-    margin: 0;
+  #header-title {
+    display: flex;
+
+    h1 {
+      margin: auto;
+    }
+  }
+
+  #header-button {
+    display: flex;
+
+    button {
+      @include span-columns(2 of 4);
+      height: 75%;
+      margin: auto;
+    }
   }
 }
