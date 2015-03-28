@@ -9,6 +9,5 @@ require 'sprockets/railtie'
 Bundler.require(*Rails.groups)
 
 module NestedAccordionSurvey
-  class Application < Rails::Application
-  end
+  class Application < Rails::Application; end
 end

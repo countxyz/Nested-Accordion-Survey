@@ -7,14 +7,10 @@ RSpec.configure do |config|
 
   config.filter_run :focus
 
-  config.mock_with :rspec do |mocks|
-    mocks.verify_partial_doubles = true
-  end
+  config.mock_with(:rspec) { |mocks| mocks.verify_partial_doubles = true }
 
   config.order = :random
-
   config.profile_examples = 10
-
   config.run_all_when_everything_filtered = true
 
   Kernel.srand config.seed
