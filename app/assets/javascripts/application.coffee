@@ -4,3 +4,4 @@
 #= require cocoon
 #= require jquery.cbpNTAccordion.min
 #= require accordion
+#= require modal

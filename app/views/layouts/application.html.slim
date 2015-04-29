@@ -1,7 +1,8 @@
 doctype 5
-html
+html lang='en'
+
   head
-    meta charset='utf-8'
+    meta charset='UTF-8' content='template language' http-equiv='content-type'
     title Survey App
     = stylesheet_link_tag 'application', \
       media: 'all', 'data-turbolinks-track' => true
@@ -9,12 +10,12 @@ html
     = csrf_meta_tags
 
   body
-    .container
+    #container
       header#site-header
         = render 'layouts/header'
 
       section#site-content
         = yield
-        
+
       footer#site-footer
         = render 'layouts/footer'

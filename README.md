@@ -5,8 +5,6 @@
 A Rails Single Page Survey Demo powered by the super duper awesomeness of
 Codrop's
 [Nested Accordion](http://tympanus.net/codrops/2013/03/29/nested-accordion).
-View Demo:
-[Rails Accordion Survey](http://nested-accordion-survey.herokuapp.com/)
 
 ## License
 
@@ -14,7 +12,7 @@ Copyright (C) 2014 Efren Aguirre <skeptoid@gmail.com>
 
 This work is free. You can redistribute it and/or modify it under the
 terms of the Do What The Fuck You Want To Public License, Version 2,
-as published by Sam Hocevar. See 
+as published by Sam Hocevar. See
 [License](https://github.com/countxyz/Nested-Accordion-Survey/blob/master/LICENSE.txt)
 for more details.
 
